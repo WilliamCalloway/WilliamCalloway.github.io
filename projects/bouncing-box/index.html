@@ -8,8 +8,9 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(255, 96, 4);
 			font-size: 300%;
+			border-radius: 5px;
 			text-align: center;
 			display: block;
 			position: absolute;
@@ -61,7 +62,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
+			var positionX = 1;
+			var points = 0;
+			var speed = 0;
 
 			
 			/* 
@@ -70,8 +73,16 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
+				/*Your Code to Increase positionX by 10 HERE*/
+				positionX = positionX + 10;
+				moveBoxTo(positionX);
+				positionX += speed;
+				if (positionX < boardWidth) {
+					speed = speed * -1;
+				}
+				if (positionX > -1) {
+					speed = -speed * 1;
+				}
 			};
 
 			/* 
@@ -80,8 +91,10 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
+				positionX = 0;
+				points = points + 1;
+				changeBoxText(points);
+				speed = speed + 6;
 
 			};
 		})();

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Taco Shop</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            #menu, #take-order {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #take-order > p {
+                padding-right: 10px;
+            }
+
+            .menu-item {
+                border: 3px solid gray;
+            }
+
+            .menu-item > h4,
+            .menu-item > img {
+                padding: 10px;
+                padding-bottom: 5px;
+            }
+
+            img {
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="all-contents">
+            <nav>
+                <h1>Taco Shop</h1>
+                <div id="take-order">
+                    <p>When you're ready to place your order, click here: </p>
+                    <button>Place Order</button>
+                </div>
+            </nav>
+            <main>
+                <h3>Menu</h3>
+                <div id="menu">
+                    <div id="three-tacos" class="menu-item">
+                        <h4> #1 - Three Tacos</h4>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-phbs_RqH7HoN_2XLKiTXd0zTOeMGLncug&usqp=CAU">
+                        <h4>6.99</h4>
+                    </div>
+                    <div id="five-tacos" class="menu-item">
+                        <h4> #2 - Five Tacos</h4>
+                        <img src="https://i2.wp.com/thesuburbansoapbox.com/wp-content/uploads/2021/02/Birria-Tacos-8.jpg">
+                        <h4>9.99</h4>
+                    </div>
+                    <div id="Salsa" class="menu-item">
+                        <h4> #3 - Homemade Salsa</h4>
+                        <img src="https://www.cookingclassy.com/wp-content/uploads/2018/07/salsa-17.jpg"
+                        <h4>5.99</h4>
+                    </div>
+                    <div id="Special-Taco" class="menu-item">
+                        <h4> #4 - Special Taco</h4>
+                        <img src="https://lh3.googleusercontent.com/oYoz2k1dKEQlNn41U6e7A22kaUw_aZaklKarUqBoH19KjMT9ZBcOndDz5smr-UIoTotmaowDgBioHyPZ6SEJnrxJzkRI8eQ95pwRiQ=w1200-rj-l68-e365"
+                        <h4>3.99</h4>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            $('button').on('click', takeOrder);
+            console.log("Testing hi");
+
+            var total = 0;
+
+            var orderNumber = alert('What combo number would you like to order?'); // NOTE: the value will be stored as a string
+
+// Use conditional statements to update the value of the total
+// Make sure to additional else if statements for any additional menu items you added in TODO 1
+if (orderNumber === three-tacos) {
+    total += 6.99;
+}
+if (orderNumber === five-tacos) {
+    total += 9.99;
+} else if (orderNumber === Salsa) {
+    total += 9.99;
+} else if (orderNumber === Special-Taco) {
+    total += 3.99
+} else {
+    alert('Sorry, you entered an incorrect combo number'); // Let's the user know that they incorrectly entered information
+}
+        </script>
+    </body>
+</html>
